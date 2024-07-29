@@ -102,6 +102,15 @@ body {
     font-size: 60px;
 }
 
+#header_wrap {
+    width: 1920px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    margin-left: -960px;
+    z-index: 99;
+}
+
 #header_bg {
     width: 1920px;
     height: 90px;

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1400">
+    <title>AZIT</title>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><!--aos js 연결-->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script><!-- 달력 -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <!-- css -->
+    <link rel="stylesheet" href="css/main_style.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/mainpage/favicon.png" type="image/x-icon">
+    <!-- webfont -->
+    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="css/swiper.css">
+    <!-- swiper js -->
+    <link rel="stylesheet" href="js/swiper.js">
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header_container">
+            <div id="main_txt">
+                <img src="images/mainpage/main_banner_text_img.png" alt="text_img">
+            </div>
+            <div id="slide_wrap">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/mainpage/main_banner_img1.jpg" alt="1"></div>
+                        <div class="swiper-slide"><img src="images/mainpage/main_banner_img2.jpg" alt="2"></div>
+                        <div class="swiper-slide"><img src="images/mainpage/main_banner_img3.jpg" alt="3"></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <div id="header_wrap">
+                <div id="header_bg"></div>
+                <div id="header">
+                    <div class="header_logo">
+                        <a href="index.html"><img src="images/mainpage/header_logo.svg" alt="header_logo"></a>
+                    </div>
+                    <ul class="gnb">
+                        <li><a href="./sub/aboutus.html">PROLOGUE</a></li>
+                        <li><a href="./sub/room.html">ROOM</a></li>
+                        <li><a href="./sub/event.html">EVENT</a></li>
+                        <li><a href="./sub/travel.html">TRAVEL</a></li>
+                    </ul>
+                    <div class="submenu">
+                        <div class="inner_submenu">
+                            <div class="img_wrap">
+                                <img src="images/mainpage/submenu_img.jpg" alt="submenu_img">
+                            </div>
+                            <ul>
+                                <li><a href="./sub/aboutus.html">ABOUT US</a></li>
+                                <li><a href="#">GLAMPING</a></li>
+                                <li><a href="#">CAFE</a></li>
+                                <li><a href="#">BBQ</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="./sub/room.html">ROOM A</a></li>
+                                <li><a href="./sub/room.html">ROOM B</a></li>
+                                <li><a href="./sub/room.html">ROOM C</a></li>
+                                <li><a href="#">GLAMPING A</a></li>
+                                <li><a href="#">GLAMPING B</a></li>
+                                <li><a href="#">GLAMPING C</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="./sub/event.html">진행중인 이벤트</a></li>
+                                <li><a href="./sub/event.html">종료된 이벤트</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="./sub/travel.html">주변 관광지</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="reservation">
+                        <a href="./sub/reservation.html">RESERVATION</a>
+                    </div>
+                </div>
+            </div>
+            <div class="reservation_container">
+                <div class="reservation_wrap">
+                    <div class="reservation_box reservation1">
+                        <div class="reservation_type">
+                            <p class="reservation_title">RESERVATION</p>
+                            <div class="arrow_wrap">
+                                <p class="reservation_value">ROOM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reservation_box reservation2">
+                        <div class="reservation_date">
+                            <p class="reservation_title">Check IN/OUT</p>
+                            <div class="select">
+                                <input type="text" id="datepicker" placeholder="CHECK IN" class="day">
+                                <input type="text" id="datepicker1" placeholder="CHECK OUT" class="day">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reservation_box reservation3">
+                        <div class="reservation_room">
+                            <p class="reservation_title1">ROOM</p>
+                            <select>
+                                <option>ROOM A</option>
+                                <option>ROOM B</option>
+                                <option>ROOM C</option>
+                                <option>GLAMPING A</option>
+                                <option>GLAMPING B</option>
+                                <option>GLAMPING C</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="reservation_box reservation4">
+                        <div class="reservation_room">
+                            <p class="reservation_title1">ADULT</p>
+                            <select class="adult_select">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="reservation_box reservation5">
+                        <div class="reservation_room">
+                            <p class="reservation_title1">CHILDREN</p>
+                            <select class="children_select">
+                                <option>0</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="reservation_search">
+                        <a href="#">객실 예약하기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="section1_banner">
+            <!-- Logo design banner -->
+        </div>
+        <div id="section2_rooms">
+            <div class="rooms">
+                <p class="rooms_title">ROOMS</p>
+                <p>더 많은 사람들이 보다 즐거운 시간과 아늑한 휴식을 보낼 수 있도록
+                    <br>여유와 낭만을 담아 최고의 여행을 선물합니다.
+                </p>
+                <div class="rooms_name">
+                    <ul class="room_tab">
+                        <li class="on">
+                            <a class="name" href="javascript:return false;">ROOM A</a>
+                            <div class="rooms_img">
+                                <div class="room_a_bg">
+                                    <p>ROOM A</p>
+                                    <a href="index.html">자세히 보기</a>
+                                </div>
+                                <div class="info_bg">
+                                    <p>고즈넉하게 편안한 분위기 속에서 누리는 환상적인 노을과 머물수록 감탄이 절로 나오는 객실의 디테일을 느껴보세요.</p>
+                                </div>
+                                <img src="images/mainpage/room_a_img.jpg" alt="room-a">
+                            </div>
+                        </li>
+                        <li>
+                            <a class="name" href="javascript:return false;">ROOM B</a>
+                            <div class="rooms_img">
+                                <div class="room_a_bg">
+                                    <p>ROOM B</p>
+                                    <a href="#">자세히 보기</a>
+                                </div>
+                                <div class="info_bg">
+                                    <p>고즈넉하게 편안한 분위기 속에서 누리는 환상적인 노을과 머물수록 감탄이 절로 나오는 객실의 디테일을 느껴보세요.</p>
+                                </div>
+                                <img src="images/mainpage/room_b_img.jpg" alt="room-b">
+                            </div>
+                        </li>
+                        <li>
+                            <a class="name" href="javascript:return false;">ROOM C</a>
+                            <div class="rooms_img">
+                                <div class="room_a_bg">
+                                    <p>ROOM C</p>
+                                    <a href="#">자세히 보기</a>
+                                </div>
+                                <div class="info_bg">
+                                    <p>고즈넉하게 편안한 분위기 속에서 누리는 환상적인 노을과 머물수록 감탄이 절로 나오는 객실의 디테일을 느껴보세요.</p>
+                                </div>
+                                <img src="images/mainpage/room_c_img.jpg" alt="room-c">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div id="middle_banner"></div>
+        <div id="section2">
+            <!-- glamping -->
+            <div class="glamping">
+                <p class="glamping_title">GLAMPING</p>
+                <p>새로운 공간에서 지금까지 경험하지 못한
+                    <br>글램핑의 새로운 기준과 매력을 여러분들께 선물합니다.
+                </p>
+                <div class="glamping_name">
+                    <ul class="glamping_tab">
+                        <li class="on">
+                            <a class="name" href="javascript:return false;">GLAMPING A</a>
+                            <div class="glamping_img">
+                                <div class="glamping_a">
+                                    <div class="glamping_a_bg">
+                                        <p>GLAMPING A</p>
+                                        <a href="#">자세히 보기</a>
+                                    </div>
+                                </div>
+                                <div class="glamping_info">
+                                    <div class="info_bg1">
+                                        <p>새로운 느낌의 글램핑을 여러분들의 추억을 가득 담아 더욱 다채롭게 즐겨보세요.</p>
+                                    </div>
+                                </div>
+                                <img src="images/mainpage/glamping_a_img.jpg" alt="glamping-a">
+                            </div>
+                        </li>
+                        <li>
+                            <a class="name" href="javascript:return false;">GLAMPING B</a>
+                            <div class="glamping_img">
+                                <div class="glamping_a">
+                                    <div class="glamping_a_bg">
+                                        <p>GLAMPING B</p>
+                                        <a href="#">자세히 보기</a>
+                                    </div>
+                                </div>
+                                <div class="glamping_info">
+                                    <div class="info_bg1">
+                                        <p>새로운 느낌의 글램핑을 여러분들의 추억을 가득 담아 더욱 다채롭게 즐겨보세요.</p>
+                                    </div>
+                                </div>
+                                <img src="images/mainpage/glamping_b_img.jpg" alt="glamping-b">
+                            </div>
+                        </li>
+                        <li>
+                            <a class="name" href="javascript:return false;">GLAMPING C</a>
+                            <div class="glamping_img">
+                                <div class="glamping_a">
+                                    <div class="glamping_a_bg">
+                                        <p>GLAMPING C</p>
+                                        <a href="#">자세히 보기</a>
+                                    </div>
+                                </div>
+                                <div class="glamping_info">
+                                    <div class="info_bg1">
+                                        <p>새로운 느낌의 글램핑을 여러분들의 추억을 가득 담아 더욱 다채롭게 즐겨보세요.</p>
+                                    </div>
+                                </div>
+                                <img src="images/mainpage/glamping_c_img.jpg" alt="glamping-c">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="section3">
+            <!-- facility -->
+            <div class="facility_wrap">
+                <h2>FACILITY</h2>
+                <p>아지트에서 이용할 수 있는 부대시설 및 서비스입니다.</p>
+                <ul class="facility">
+                    <li class="facility_item">
+                        <div class="blur">
+                            <img src="images/mainpage/facility_bbq_img.jpg" alt="bbq">
+                            <div class="facility_text">
+                                <p>BBQ & CAMPFIRE</p>
+                                <a href="#">Learn more</a>
+                            </div>
+                        </div>
+                        <p class="facility_title">BBQ & CAMPFIRE</p>
+                        <p>여행의 꽃! 신나는 물놀이 후의 맛있는 식사.
+                            <br>그리고 불멍까지!
+                            <br>아지트의 낭만적인 야경을
+                            <br>사랑하는 사람들과 함께 감상해보세요
+                        </p>
+                    </li>
+                    <li class="facility_item">
+                        <div class="blur">
+                            <img src="images/mainpage/facility_infinity_img.jpg" alt="infinity">
+                            <div class="facility_text">
+                                <p>INFINITY POOL</p>
+                                <a href="#">Learn more</a>
+                            </div>
+                        </div>
+                        <div class="facility_info">
+                            <p class="facility_title">INFINITY POOL</p>
+                            <p>펜션 내 운영하는 야외 미온수 수영장이 있습니다.
+                                <br>무더운 날씨에는 시원하게, 쌀쌀한 날씨에는 따뜻하게
+                                <br>아지트에서 즐거운 물놀이를 즐겨보세요.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="facility_item">
+                        <div class="blur">
+                            <img src="images/mainpage/facility_cafe_img.JPG" alt="cafe">
+                            <div class="facility_text">
+                                <p>CAFE</p>
+                                <a href="#">Learn more</a>
+                            </div>
+                        </div>
+                        <p class="facility_title">CAFE</p>
+                        <p>함께 온 이들과 좋은 음식, 즐거운 이야기를 나눠보세요.
+                            <br>커피를 향긋하게 내리고, 차분한 음악을 들으며
+                            <br>여유를 즐기기 좋은 아지트만의 공간입니다.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="text_flow1">
+            <!-- text slide -->
+            <div class="animated">
+                <div class="track left">
+                    <p>AZIT Pension&Glamping Stage AZIT Pension&Glamping Stage AZIT Pension&Glamping Stage AZIT
+                        Pension&Glamping Stage AZIT Pension&Glamping Stage AZIT Pension&Glamping Stage AZIT
+                        Pension&Glamping Stage AZIT Pension&Glamping Stage AZIT Pension&Glamping Stage AZIT
+                        Pension&Glamping Stage AZIT Pension&Glamping Stage AZIT Pension&Glamping Stage AZIT
+                        Pension&Glamping Stage AZIT
+                        Pension&Glamping Stage AZIT Pension&Glamping Stage AZIT Pension&Glamping Stage AZIT
+                        Pension&Glamping Stage AZIT Pension&Glamping Stage AZIT Pension&Glamping Stage AZIT
+                        Pension&Glamping Stage AZIT Pension&Glamping Stag</p>
+                </div>
+            </div>
+        </div>
+        <div id="section5">
+            <!-- brandstory banner -->
+            <div class="brand_story">
+                <a href="#" onclick="return false">BRAND STORY</a>
+                <img src="images/mainpage/brand_story_arrow.png" alt="arrow">
+            </div>
+        </div>
+        <div id="footer">
+            <div class="inner_footer">
+                <div class="footer_logo"></div>
+                <div class="footer_link">
+                    <ul>
+                        <li><a href="#">이용안내</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">이메일무단수집금지</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer_text">
+                <p>경상남도 남해군 남해대로 928</p>
+                <p>AZIT Pension&Glamping Stage.</p>
+                <div class="footer_text1">
+                    <p class="after">T. +82-10-9009-9008</p>
+                    <p>E. kwontth@gmail.com</p>
+                </div>
+                <div class="footer_text2">
+                    <p class="after">Corporate Reg. No. : 102-34-97516</p>
+                    <p>통신판매번호 : 제2024-경남남해-0822호</p>
+                </div>
+                <div class="footer_cop_ico">
+                    <p>Copyrightⓒ AZIT Pension&Glamping Stage. ALL RIGHT RESERVED.</p>
+                    <div class="icon">
+                        <a href="https://www.youtube.com/@solidlayer?si=6vP1ZwlDV6C-hjb0" target="_blank"><img src="images/mainpage/footer_ic_youtube.png" alt="youtube"></a>
+                        <a href="https://www.instagram.com/solid_layer_youtube" target="_blank"><img src="images/mainpage/footer_ic_instagram.png"
+                                alt="instagram"></a>
+                        <a href="#" target="_blank"><img src="images/mainpage/footer_ic_facebook.png"
+                                alt="facebook"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -162,16 +162,28 @@ body {
 }
 
 .inner_submenu {
-    width: 1000px;
+    width: 1320px;
     margin: 0 auto;
     display: flex;
-    justify-content: flex-end;
     position: relative;
 }
-
+.inner_submenu .img_wrap{
+    width: 355px;
+    padding-top: 30px;
+}
+.w1{
+    width: 170px;
+}
+.w2{
+    width: 129px;
+}
+.w3{
+    width: 134px;
+}
 .inner_submenu ul li a {
     display: block;
-    padding: 8px 32px;
+    /* padding: 8px 32px; */
+    padding: 8px 0;
 }
 
 .inner_submenu ul li a:hover {

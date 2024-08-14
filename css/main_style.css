@@ -10,11 +10,11 @@
 
 @keyframes textflow1 {
     from {
-        transform: translateX(0);
+        transform: translate3d(0, 0, 0);
     }
 
     to {
-        transform: translateX(-50%);
+        transform: translate3d(-100%, 0, 0);
     }
 }
 
@@ -88,6 +88,7 @@ body {
     min-width: 1400px;
 }
 
+
 #header_container {
     position: relative;
     height: 850px;
@@ -154,6 +155,11 @@ body {
     z-index: 99;
 }
 
+#header.header-scrolled{
+    background: rgba(0, 0, 0);
+    transition: all 1s;
+}
+
 #header_bg {
     width: 1920px;
     height: 90px;
@@ -162,18 +168,19 @@ body {
     top: 0;
     left: 50%;
     margin-left: -960px;
+    z-index: -30;
 }
 #header {
-    width: 1320px;
+    width: 1920px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     font-weight: 500;
     align-items: center;
     position: absolute;
     top: 0;
     left: 50%;
-    margin-left: -660px;
+    margin-left: -960px;
 }
 
 .gnb {
@@ -201,6 +208,11 @@ body {
     left: 0;
     width: 100%;
     z-index: 90;
+}
+
+.submenu.submenu-scrolled{
+    background: rgba(0, 0, 0);
+    /* transition: all 1s; */
 }
 
 .inner_submenu {
@@ -235,11 +247,6 @@ body {
 .img_wrap img {
     width: 314px;
     height: 180px;
-    /* text-align: left;
-    display: block;
-    position: absolute;
-    top: 30px;
-    left: 0; */
     opacity: .8;
 }
 
@@ -628,7 +635,8 @@ option {
 }
 
 .left {
-    animation: textflow1 10s linear infinite;
+    /* will-change: transform; */
+    animation: textflow1 20s linear infinite;
 }
 
 #section5 {
@@ -722,3 +730,86 @@ option {
     vertical-align: -1px;
     margin: 0 10px;
 }
+
+/* Mobile Device */
+/* @media (max-width: 768px) {
+    body{
+        background-color: black;
+    }
+    #wrap{
+        max-width: 720px;
+        margin: 0 auto;
+    }
+
+    #header_container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #header{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .reservation{
+        margin-right: 300px;
+    }
+    
+    #header_bg{
+    }
+
+    #main_txt img{
+        width: 50%;
+    }
+
+    #slide_wrap{
+        width: 100%;
+    }
+    #slide_wrap img{
+        text-align: center;
+    }
+    .reservation_wrap{
+        width: 100%;
+    }
+    #section1_banner{
+        width: 100%;
+    }
+} */
+
+/* tablet */
+/* @media (max-width: 961px){
+    #wrap{
+        width: 100%;
+    }
+
+    #header
+
+    .gnb{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    #section1_banner{
+        display: none;
+    }
+
+    #section2_rooms{
+        width: 100%;
+    }
+
+    #section2_rooms img{
+        width: 50%;
+    }
+
+    .room_bg{
+        width: 50%;
+    }
+} */
+
+/* Desktop */
+/* @media screen and (min-width: 1200px){
+    #wrap{
+        max-width: 1140px;
+    }
+} */

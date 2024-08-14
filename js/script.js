@@ -63,3 +63,19 @@ monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'] //달력�
 ,dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'] //달력의 요일 부분 Tooltip 텍스트
 });
 //달력 END
+
+//scroll
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+      $('#header').addClass('header-scrolled');
+    } else {
+      $('#header').removeClass('header-scrolled');
+    }
+  })
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+      $('.submenu').addClass('submenu-scrolled');
+    } else {
+      $('.submenu').removeClass('submenu-scrolled');
+    }
+  })

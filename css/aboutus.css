@@ -76,6 +76,7 @@ body {
 
 #wrap {
     min-width: 1400px;
+    overflow-x: hidden;
 }
 
 #header_container {

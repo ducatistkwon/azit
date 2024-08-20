@@ -79,3 +79,14 @@ $(window).scroll(function() {
       $('.submenu').removeClass('submenu-scrolled');
     }
   })
+
+  const navToggle = document.querySelector('.submenu');
+  const navMenu = document.querySelector('.m_menu');
+
+  navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+  });
+
+
+
+  

@@ -11,3 +11,19 @@ $("#header_wrap").mouseleave(function(){
 $(".event_tab ul li a").click(function(){
     $(this).parent().addClass("on").siblings().removeClass("on").children();
 });
+
+//scroll
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+      $('#header').addClass('header-scrolled');
+    } else {
+      $('#header').removeClass('header-scrolled');
+    }
+  })
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+      $('.submenu').addClass('submenu-scrolled');
+    } else {
+      $('.submenu').removeClass('submenu-scrolled');
+    }
+  })
